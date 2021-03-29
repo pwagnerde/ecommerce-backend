@@ -1,0 +1,118 @@
+[ 
+{
+    "id": "1",
+    "sku": "asdf136",
+    "name": "Lorem ipsum small speaker",
+    "price": 2.5,
+    "discount": 10,
+    "offerEnd": "October 5, 2021 12:11:00",
+    "new": true,
+    "rating": 5,
+    "saleCount": 120,
+    "category": ["electronics"],
+    "tag": ["electronics"],
+    "stock": 45,
+    "image": [
+      "/assets/img/product/electronics/5.jpg",
+      "/assets/img/product/electronics/6.jpg",
+      "/assets/img/product/electronics/7.jpg",
+      "/assets/img/product/electronics/8.jpg",
+      "/assets/img/product/electronics/1.jpg"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "id": "2",
+    "sku": "asdf137",
+    "name": "Lorem ipsum microphone",
+    "price": 12.5,
+    "discount": 0,
+    "offerEnd": "",
+    "new": false,
+    "rating": 4,
+    "saleCount": 20,
+    "category": ["electronics"],
+    "tag": ["electronics"],
+    "stock": 0,
+    "image": [
+      "/assets/img/product/electronics/6.jpg",
+      "/assets/img/product/electronics/7.jpg",
+      "/assets/img/product/electronics/8.jpg",
+      "/assets/img/product/electronics/1.jpg",
+      "/assets/img/product/electronics/2.jpg"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "id": "3",
+    "sku": "asdf138",
+    "name": "Lorem ipsum grinder",
+    "price": 22.5,
+    "discount": 20,
+    "offerEnd": "October 20, 2021 12:11:00",
+    "new": true,
+    "rating": 5,
+    "saleCount": 25,
+    "category": ["electronics"],
+    "tag": ["electronics"],
+    "stock": 7,
+    "image": [
+      "/assets/img/product/electronics/7.jpg",
+      "/assets/img/product/electronics/8.jpg",
+      "/assets/img/product/electronics/1.jpg",
+      "/assets/img/product/electronics/2.jpg",
+      "/assets/img/product/electronics/3.jpg"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "id": "4",
+    "sku": "asdf139",
+    "name": "Lorem ipsum bluetooth",
+    "price": 32.5,
+    "discount": 10,
+    "offerEnd": "October 10, 2021 12:11:00",
+    "new": true,
+    "rating": 4,
+    "saleCount": 15,
+    "category": ["electronics"],
+    "tag": ["electronics"],
+    "stock": 6,
+    "image": [
+      "/assets/img/product/electronics/8.jpg",
+      "/assets/img/product/electronics/1.jpg",
+      "/assets/img/product/electronics/2.jpg",
+      "/assets/img/product/electronics/3.jpg",
+      "/assets/img/product/electronics/4.jpg"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "id": "5",
+    "sku": "asdf131",
+    "name": "Lorem ipsum fashion female top",
+    "price": 35.6,
+    "discount": 0,
+    "offerEnd": "",
+    "new": false,
+    "rating": 4,
+    "saleCount": 95,
+    "category": ["fashion", "women"],
+    "tag": ["fashion", "women", "top", "sleeveless"],
+    "stock": 5,
+    "affiliateLink": "//www.amazon.com",
+    "image": [
+      "/assets/img/product/fashion/9.jpg",
+      "/assets/img/product/fashion/7.jpg",
+      "/assets/img/product/fashion/5.jpg",
+      "/assets/img/product/fashion/2.jpg",
+      "/assets/img/product/fashion/4.jpg"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  }
+]
