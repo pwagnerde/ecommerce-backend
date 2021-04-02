@@ -28,6 +28,8 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+config/keys.js
 
 # Optional eslint cache
 .eslintcache
+

@@ -1,11 +1,11 @@
 [ 
 {
     "id": "1",
-    "sku": "asdf136",
-    "name": "Lorem ipsum small speaker",
-    "price": 2.5,
+    "sku": "p2021l01",
+    "name": "Ledger Nano X",
+    "price": 119.0,
     "discount": 10,
-    "offerEnd": "October 5, 2021 12:11:00",
+    "offerEnd": "May 5, 2021 12:11:00",
     "new": true,
     "rating": 5,
     "saleCount": 120,
@@ -13,14 +13,14 @@
     "tag": ["electronics"],
     "stock": 45,
     "image": [
-      "/assets/img/product/electronics/5.jpg",
-      "/assets/img/product/electronics/6.jpg",
-      "/assets/img/product/electronics/7.jpg",
-      "/assets/img/product/electronics/8.jpg",
-      "/assets/img/product/electronics/1.jpg"
+      "/img/product/ledger/ledger-nano-x-1.png"
     ],
-    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    "shortDescription": "The next level hardware wallet. Buy & Securely manage your crypto in one single-app, anywhere you go. Become the only one in charge of your assets.",
+    "fullDescription": "Install up to 100 crypto applications at the same time on your Ledger Nano X. More than 1500 coins and tokens supported, including Bitcoin, Ethereum, XRP, Litecoin. Securely manage your crypto on-the-go. Connect your Ledger Nano X to your smartphone with Ledger Live and start managing your assets everywhere.",
+    "weight": "34 g",
+    "dimensions": "72 mm x 18.6 mm x 11.75 mm",
+    "materials" : "Brushed stainless steel and plastic",
+    "otherInfo" : "1 hardware wallet, 1 USB-C to USB-A cable, 1 getting started leaflet, 3 recovery sheets, 1 keychain strap"
   },
   {
     "id": "2",
@@ -43,7 +43,11 @@
       "/assets/img/product/electronics/2.jpg"
     ],
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "weight": "400 g",
+    "dimensions": "10 x 10 x 15 cm",
+    "materials" : "60% cotton, 40% polyester",
+    "otherInfo" : "American heirloom jean shorts pug seitan letterpress"
   },
   {
     "id": "3",
@@ -66,7 +70,11 @@
       "/assets/img/product/electronics/3.jpg"
     ],
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "weight": "400 g",
+    "dimensions": "10 x 10 x 15 cm",
+    "materials" : "60% cotton, 40% polyester",
+    "otherInfo" : "American heirloom jean shorts pug seitan letterpress"
   },
   {
     "id": "4",
@@ -89,7 +97,11 @@
       "/assets/img/product/electronics/4.jpg"
     ],
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "weight": "400 g",
+    "dimensions": "10 x 10 x 15 cm",
+    "materials" : "60% cotton, 40% polyester",
+    "otherInfo" : "American heirloom jean shorts pug seitan letterpress"
   },
   {
     "id": "5",
@@ -113,6 +125,10 @@
       "/assets/img/product/fashion/4.jpg"
     ],
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "weight": "400 g",
+    "dimensions": "10 x 10 x 15 cm",
+    "materials" : "60% cotton, 40% polyester",
+    "otherInfo" : "American heirloom jean shorts pug seitan letterpress"
   }
 ]
