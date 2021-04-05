@@ -1,0 +1,33 @@
+"use strict";
+const createError = require("http-errors");
+const productController = require("../controller/products");
+
+// Exports all the functions to perform on the db
+module.exports = { list, get };
+
+async function list(options) {
+  try {
+    // Load products
+    const products = await productController.find(options);
+
+    return products;
+  } catch (err) {
+    throw err;
+  }
+}
+
+async function get(id) {
+  try {
+    // Check if product exists
+    const product = await productController.findOne(id);
+
+    // If no product found, reject
+    if (!product) {
+      throw createError(404, "Product not found");
+    }
+
+    return product;
+  } catch (err) {
+    throw err;
+  }
+}

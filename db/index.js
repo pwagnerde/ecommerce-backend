@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const { Pool, types } = require("pg");
 
 types.setTypeParser(1700, "text", parseFloat);

@@ -3,20 +3,50 @@
 const db = require("../db");
 
 // Exports all the functions to perform on the db
-module.exports = { getProductsAll };
+module.exports = { find, findOne };
 
-//GET /products operationId
-async function getProductsAll(req, res, next) {
+/**
+ * List products
+ * @param  {Object} options [Query options]
+ * @return {Array}          [Array of products]
+ */
+async function find(options = {}) {
   try {
-    const { rows } = await db.query(
-      "SELECT * FROM public.product"
-    );
-    if (rows[0]) {
-      res.status(200).send(rows);
-    } else {
-      res.status(204).send(`No product data found in database`);
+    const statement = "SELECT * FROM product";
+    const values = [];
+
+    const result = await db.query(statement, values);
+
+    if (result.rows?.length) {
+      return result.rows;
     }
-  } catch (e) {
-    res.status(500).send(e);
+
+    return [];
+  } catch (err) {
+    throw err;
   }
 }
+
+  /**
+   * Retrieve product by ID
+   * @param  {Object}      id [Product ID]
+   * @return {Object|null}    [Product record]
+   */
+  async function findOne(id) {
+    try {
+
+      const statement = `SELECT * FROM product WHERE id = $1`;
+      const values = [id];
+  
+      const result = await db.query(statement, values);
+
+      if (result.rows?.length) {
+        return result.rows[0]
+      }
+  
+      return null;
+
+    } catch(err) {
+      throw err;
+    }
+  }
