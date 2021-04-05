@@ -241,7 +241,8 @@ async function update(data) {
       address_country_code,
     } = data;
 
-    //if (id !== customer_id) return null;
+    // Make sure req body data belongs to req params
+    if (parseInt(id) !== parseInt(customer_id)) throw {message: "Parameter mismatch request"};
 
     await db.query("BEGIN");
     // Generate SQL statement
