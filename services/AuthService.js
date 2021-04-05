@@ -1,6 +1,8 @@
 "use strict";
 const createError = require("http-errors");
 const customerController = require("../controller/customers");
+const bcrypt = require("bcrypt");
+const saltRounds = 14;
 
 // Exports all the functions to perform on the db
 module.exports = { register, login };
@@ -10,9 +12,7 @@ async function register(data) {
 
   try {
     // Check if username already exists
-    const user = await customerController.findOnePasswordByUsername(
-      username
-    );
+    let user = await customerController.findOnePasswordByUsername(username);
 
     // If username already exists, reject
     if (user) {
@@ -26,10 +26,16 @@ async function register(data) {
       throw createError(409, "Email already in use");
     }
 
-    // User doesn't exist, create new user record
-    return await customerController.create(data, "loc");
+    // User doesn't exist, create new user record and hash password
+    const hashedPassword = await bcrypt.hash(data.password, saltRounds);
+    return await customerController.create(
+      { ...data, password: hashedPassword },
+      "loc"
+    );
+
+
   } catch (err) {
-    throw createError(500, err);
+    throw err;
   }
 }
 
@@ -46,8 +52,8 @@ async function login(data) {
     }
 
     // Check for matching passwords
-    // ----TO DO ADD BYCRYPT ------
-    if (user.password_hash !== password) {
+    const match = await bcrypt.compare(password, user.password_hash);
+    if (!match) {
       throw createError(401, "Incorrect username or password");
     }
 
@@ -56,6 +62,6 @@ async function login(data) {
 
     return user;
   } catch (err) {
-    throw createError(500, err);
+    throw err;
   }
 }
