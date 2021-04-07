@@ -4,12 +4,12 @@ const db = require("../db");
 
 // Exports all the functions to perform on the db
 module.exports = {
+  create,
   find,
   findOneById,
   findOneByUsername,
   findOnePasswordByUsername,
   findOneByEmail,
-  create,
   update
 };
 

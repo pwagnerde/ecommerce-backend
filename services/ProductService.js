@@ -16,10 +16,10 @@ async function list(options) {
   }
 }
 
-async function get(id) {
+async function get(productId) {
   try {
     // Check if product exists
-    const product = await productController.findOne(id);
+    const product = await productController.findOne(productId);
 
     // If no product found, reject
     if (!product) {

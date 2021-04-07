@@ -50,7 +50,7 @@ CREATE TABLE "order_status_code" (
 );
 
 CREATE TABLE "product" (
-  "id" integer PRIMARY KEY NOT NULL,
+  "product_id" integer PRIMARY KEY NOT NULL,
   "name" "character varying(100)" NOT NULL,
   "sku" "character varying(50)" NOT NULL,
   "fullDescription" "character varying(500)" NOT NULL,
@@ -97,8 +97,7 @@ CREATE TABLE "shopping_cart_item" (
   "cart_item_id" integer PRIMARY KEY NOT NULL,
   "cart_id" integer NOT NULL,
   "product_id" integer NOT NULL,
-  "quantity" integer NOT NULL,
-  "price" numeric NOT NULL
+  "quantity" integer NOT NULL
 );
 
 CREATE TABLE "shopping_cart_status" (
@@ -117,7 +116,7 @@ ALTER TABLE "order" ADD FOREIGN KEY ("status_code_id") REFERENCES "order_status_
 
 ALTER TABLE "order_item" ADD FOREIGN KEY ("order_id") REFERENCES "order" ("order_id");
 
-ALTER TABLE "order_item" ADD FOREIGN KEY ("product_id") REFERENCES "product" ("id");
+ALTER TABLE "order_item" ADD FOREIGN KEY ("product_id") REFERENCES "product" ("product_id");
 
 ALTER TABLE "product" ADD FOREIGN KEY ("vendor_id") REFERENCES "product_vendor" ("vendor_id");
 
@@ -125,6 +124,6 @@ ALTER TABLE "shopping_cart" ADD FOREIGN KEY ("customer_id") REFERENCES "customer
 
 ALTER TABLE "shopping_cart" ADD FOREIGN KEY ("status_code_id") REFERENCES "shopping_cart_status" ("status_code_id");
 
-ALTER TABLE "shopping_cart_item" ADD FOREIGN KEY ("product_id") REFERENCES "product" ("id");
+ALTER TABLE "shopping_cart_item" ADD FOREIGN KEY ("product_id") REFERENCES "product" ("product_id");
 
 ALTER TABLE "shopping_cart_item" ADD FOREIGN KEY ("cart_id") REFERENCES "shopping_cart" ("cart_id");
