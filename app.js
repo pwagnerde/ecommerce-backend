@@ -40,31 +40,33 @@ const LocalStrategy = require("passport-local");
 const AuthService = require("./services/AuthService.js");
 
 // Initialize passport
-  app.use(passport.initialize());  
-  app.use(passport.session());
-  
-  // Set method to serialize data to store in cookie
-  passport.serializeUser((user, done) => {
-    done(null, user.customer_id);
-  });
-  
-  // Set method to deserialize data stored in cookie and attach to req.user
-  passport.deserializeUser((id, done) => {
-    done(null, { id });
-  });
+app.use(passport.initialize());
+app.use(passport.session());
 
-  // Configure local strategy to be use for local login
-  passport.use(new LocalStrategy(
-    async (username, password, done) => {
-      try {
-        const user = await AuthService.login({ username: username, password: password });
-        return done(null, user);
-      } catch(err) {
-        return done(err);
-      }
+// Set method to serialize data to store in cookie
+passport.serializeUser((user, done) => {
+  done(null, user.customer_id);
+});
+
+// Set method to deserialize data stored in cookie and attach to req.user
+passport.deserializeUser((id, done) => {
+  done(null, { id });
+});
+
+// Configure local strategy to be use for local login
+passport.use(
+  new LocalStrategy(async (username, password, done) => {
+    try {
+      const user = await AuthService.login({
+        username: username,
+        password: password,
+      });
+      return done(null, user);
+    } catch (err) {
+      return done(err);
     }
-  ));
-
+  })
+);
 
 /*__________API route handler______________*/
 const indexRouter = require("./routes/index");
@@ -74,7 +76,6 @@ const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
 const orderRouter = require("./routes/order");
 
-
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
 app.use("/customers", customerRouter);
@@ -83,12 +84,38 @@ app.use("/carts", cartRouter);
 app.use("/orders", orderRouter);
 
 /*__________Swagger middlewares___________*/
+const swaggerJsdoc = require("swagger-jsdoc");
+// swagger definition
+const swaggerDefinition = {
+  info: {
+    title: "PNEW.digital Node API",
+    version: "1.0.1",
+    description: "Swagger documentation of RESTful API for ecommerce apps",
+  },
+  host: "localhost:3080",
+  basePath: "/",
+};
+
+// options for the swagger docs
+const options = {
+  // import swaggerDefinitions
+  swaggerDefinition: swaggerDefinition,
+  // path to the API docs
+  apis: ["./routes/product.js"],
+};
+
+// initialize swagger-jsdoc
+const swaggerSpec = swaggerJsdoc(options);
+
+// serve swagger
+app.get("/swagger.json", function (req, res) {
+  res.setHeader("Content-Type", "application/json");
+  res.send(swaggerSpec);
+});
 
 /*__________Error handler__________________*/
 app.use((err, req, res, next) => {
-  res
-    .status(err.status || 500)
-    .send({ message: err.message } );
+  res.status(err.status || 500).send({ message: err.message });
 });
 
 module.exports = app;

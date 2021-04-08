@@ -10,6 +10,11 @@ async function list(options) {
     // Load products
     const products = await productController.find(options);
 
+    // If no products found, reject
+    if (!products) {
+      throw createError(204, "No products found");
+    }
+
     return products;
   } catch (err) {
     throw err;
