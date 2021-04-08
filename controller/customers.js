@@ -41,12 +41,12 @@ async function find(options = {}) {
  * @param  {String}      id [Customer ID]
  * @return {Object|null}    [Customer Record]
  */
-async function findOneById(id) {
+async function findOneById(customerId) {
   try {
     // Generate SQL statement
     const statement =
       "SELECT * FROM customer JOIN customer_address ON customer.customer_id = customer_address.customer_id AND customer.customer_id = $1";
-    const values = [id];
+    const values = [customerId];
 
     // Execute SQL statment
     const result = await db.query(statement, values);

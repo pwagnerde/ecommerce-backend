@@ -69,16 +69,18 @@ const AuthService = require("./services/AuthService.js");
 /*__________API route handler______________*/
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
-const customersRouter = require("./routes/customer");
-const productsRouter = require("./routes/product");
-const cartsRouter = require("./routes/cart");
+const customerRouter = require("./routes/customer");
+const productRouter = require("./routes/product");
+const cartRouter = require("./routes/cart");
+const orderRouter = require("./routes/order");
 
 
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
-app.use("/customers", customersRouter);
-app.use("/products", productsRouter);
-app.use("/carts", cartsRouter);
+app.use("/customers", customerRouter);
+app.use("/products", productRouter);
+app.use("/carts", cartRouter);
+app.use("/orders", orderRouter);
 
 /*__________Swagger middlewares___________*/
 

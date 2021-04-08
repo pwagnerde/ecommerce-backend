@@ -2,6 +2,8 @@
 const createError = require("http-errors");
 const cartController = require("../controller/carts");
 const cartItemController = require("../controller/cartItems");
+const orderController = require("../controller/order");
+const orderItemController = require("../controller/orderItems");
 
 // Exports all the functions to perform on the db
 module.exports = {
@@ -20,14 +22,7 @@ async function create(data) {
     // Check if product exists
     let cart = await cartController.findOneByCustomer(customer_id);
 
-    /*
-        // If open card found, reject
-        if (cart) {
-          throw createError(409, "Open shopping card already available");
-        }
-        */
-
-    // If open card found, load full card
+    // If open card found, load full card items
     if (cart) {
       const items = await cartItemController.find(cart.cart_id);
       cart.items = items;
@@ -50,13 +45,6 @@ async function loadCart(customerId) {
   try {
     // Load user cart based on ID
     let cart = await cartController.findOneByCustomer(customerId);
-
-    /*
-    // If no card found, reject
-    if (!cart) {
-      throw createError(404, "Cart not found");
-    }
-    */
 
     // If no card found, create cart
     if (!cart) {
@@ -122,15 +110,51 @@ async function checkout(cartId, customerId, paymentInfo) {
     // Load cart items
     const cartItems = await cartItemController.find(cartId);
 
+    if (!cartItems) {
+      throw createError(409, "No items in shopping cart");
+    }
+
     // Generate total price from cart items
     const total = cartItems.reduce((total, item) => {
-      return (total += Number(item.price));
+      let itemTotal = (
+        item.price *
+        (1 - item.discount / 100) *
+        item.quantity
+      ).toFixed(2);
+      return (total += Number(itemTotal));
     }, 0);
 
-    // TO DO AFTER ORDER SERVICE SETUP + STRIPE SERVICE
-    return {
-      message: `Checkout of cart ${cartId} [total price: ${total}] for customer ${customerId} with payment ${paymentInfo} successful!`,
-    };
+    // Generate initial order
+    let order = await orderController.create(
+      customerId,
+      total.toFixed(2),
+      cartItems,
+      "Payment via bankwire"
+    );
+
+    // On successful order creation, update cart status to CHECKED OUT
+    await cartController.update(cartId, 3);
+
+    // Make charge to payment method (not required in this project)
+    /*
+    const stripe = require('stripe')('TO BE ADDED');
+    const charge = await stripe.charges.create({
+      amount: total,
+      currency: 'eur',
+      source: paymentInfo.id,
+      description: `PNEW.digital charge for order: #${order.order_id}`
+    });
+    */
+
+    // On successful charge to payment method, update order status to COMPLETE
+
+    order = await orderController.update(order.order_id, 2);
+
+    // Load order items and add them to the order record
+    const items = await orderItemController.find(order.order_id);
+    order.items = items;
+
+    return order;
   } catch (err) {
     throw err;
   }

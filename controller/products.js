@@ -32,11 +32,11 @@ async function find(options = {}) {
    * @param  {Object}      id [Product ID]
    * @return {Object|null}    [Product record]
    */
-  async function findOne(id) {
+  async function findOne(productId) {
     try {
 
-      const statement = `SELECT * FROM product WHERE id = $1`;
-      const values = [id];
+      const statement = `SELECT * FROM product WHERE product_id = $1`;
+      const values = [productId];
   
       const result = await db.query(statement, values);
 

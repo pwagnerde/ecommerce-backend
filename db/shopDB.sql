@@ -32,7 +32,8 @@ CREATE TABLE "order" (
   "customer_id" integer NOT NULL,
   "status_code_id" integer NOT NULL,
   "customer_comments" "character varying(300)",
-  "created_at" timestamp NOT NULL
+  "created_at" timestamp NOT NULL,
+  "total" numeric NOT NULL
 );
 
 CREATE TABLE "order_item" (
@@ -40,7 +41,7 @@ CREATE TABLE "order_item" (
   "order_id" integer NOT NULL,
   "product_id" integer NOT NULL,
   "quantity" integer NOT NULL,
-  "price" numeric NOT NULL
+  "final_price" numeric NOT NULL
 );
 
 CREATE TABLE "order_status_code" (

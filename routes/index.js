@@ -3,7 +3,8 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  // res.status(200).send({ message: "Welcome to the PNEW.digital API!" });
+  res.render('index');
 });
 
 module.exports = router;

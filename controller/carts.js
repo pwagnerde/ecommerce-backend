@@ -8,7 +8,7 @@ module.exports = { create, findOneByCustomer, findOneById, update };
 
 /**
  * Creates a new cart for a customer
- * @param  {Object}      id [Customer ID]
+ * @param  {number}      id [Customer ID]
  * @return {Object|null}      [Created card record]
  */
 async function create(customerId) {

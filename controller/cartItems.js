@@ -18,7 +18,7 @@ async function create(data) {
     const values = [
       data.cart_id,
       data.product_id,
-      data.quantity || 0,
+      data.quantity || 1,
     ];
 
     // Execute SQL statment
@@ -69,7 +69,7 @@ async function update(cartItemId, data) {
 async function find(cartId) {
   try {
     // Generate SQL statement
-    const statement = "SELECT * FROM shopping_cart_item JOIN product ON shopping_cart_item.product_id = product.id AND cart_id = $1";
+    const statement = "SELECT * FROM shopping_cart_item JOIN product ON shopping_cart_item.product_id = product.product_id AND cart_id = $1";
     const values = [cartId];
 
     // Execute SQL statment
