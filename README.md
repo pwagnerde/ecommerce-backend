@@ -112,6 +112,7 @@ To-do list:
 * CRUD operations on user accounts
 * 3rd party login via Google and Amazon
 * Process payments via Stripe and Paypal
+* Test cases for backend
 * Deploy API to Heroku
 
 ## Status
