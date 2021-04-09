@@ -88,6 +88,7 @@ const ProductService = require("../services/ProductService.js");
  *   get:
  *     tags:
  *       - Product
+ *     security: []
  *     description: Returns all products
  *     produces:
  *       - application/json
@@ -121,6 +122,7 @@ router.get("/", async (req, res, next) => {
  *   get:
  *     tags:
  *       - Product
+ *     security: []
  *     description: Returns a single product
  *     produces:
  *       - application/json

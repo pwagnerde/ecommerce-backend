@@ -92,7 +92,6 @@ const swaggerDefinition = {
     version: "1.0.1",
     description: "Swagger documentation of RESTful API for ecommerce apps",
   },
-  host: "localhost:3080",
   basePath: "/",
 };
 
@@ -101,7 +100,7 @@ const options = {
   // import swaggerDefinitions
   swaggerDefinition: swaggerDefinition,
   // path to the API docs
-  apis: ["./routes/product.js"],
+  apis: ["./routes/product.js", "./routes/order.js"],
 };
 
 // initialize swagger-jsdoc

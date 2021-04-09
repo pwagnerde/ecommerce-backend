@@ -107,10 +107,11 @@ async function updateItem(cartItemId, data) {
 
 async function checkout(cartId, customerId, paymentInfo) {
   try {
+      
     // Load cart items
     const cartItems = await cartItemController.find(cartId);
 
-    if (!cartItems) {
+    if (!cartItems || cartItems.length < 1) {
       throw createError(409, "No items in shopping cart");
     }
 

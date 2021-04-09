@@ -7,6 +7,9 @@ const saltRounds = 14;
 // Exports all the functions to perform on the db
 module.exports = { register, login };
 
+
+// See: https://swagger.io/docs/specification/authentication/cookie-authentication/
+
 async function register(data) {
   const { username, email_address } = data;
 
